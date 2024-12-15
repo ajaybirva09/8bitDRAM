@@ -70,9 +70,11 @@ Due to the nature of DRAM, data is stored in capacitors which tend to leak charg
 
 ### Wavefor
 ## 1bit DRAM
-
+![WhatsApp Image 2024-12-15 at 23 33 20](https://github.com/user-attachments/assets/a30f5f23-79e6-4ba5-b64e-5ca6b8c1b1e0)
+ 
 ## 8bit DRAM
-
+![WhatsApp Image 2024-12-15 at 23 33 21 (1)](https://github.com/user-attachments/assets/a522b9a6-5c86-4d7e-978e-a35755c0dd29)
+![WhatsApp Image 2024-12-15 at 23 33 21](https://github.com/user-attachments/assets/6ae8a54f-4134-497c-8650-f422808f3852)
 
 ## Getting Started
 
