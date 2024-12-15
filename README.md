@@ -23,7 +23,7 @@ This design simulates the basic architecture of a DRAM system where the memory i
 
 The following block diagram illustrates the key components of the design:
 
-![WhatsApp Image 2024-12-15 at 22 48 23](https://github.com/user-attachments/assets/cb788f58-3906-4218-a83f-76fedd3c6554)
+![image](https://github.com/user-attachments/assets/ae13091f-ce1b-4e45-91a2-69252ea3c23e)
 
 
 
@@ -44,8 +44,8 @@ A single DRAM cell consists of:
 - A **transistor** that acts as a switch.
 - A **capacitor** that holds the bit of data as charge.
 
-![image](https://github.com/user-attachments/assets/ae13091f-ce1b-4e45-91a2-69252ea3c23e)
-
+ 
+![WhatsApp Image 2024-12-15 at 22 48 23](https://github.com/user-attachments/assets/cb788f58-3906-4218-a83f-76fedd3c6554)
 The transistor is controlled by a row decoder to select which row is being accessed. The column decoder selects the specific bit within the row, allowing for either reading or writing data.
 
 ### 8-Bit DRAM Array
