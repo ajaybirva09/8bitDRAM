@@ -23,3 +23,52 @@ This design simulates the basic architecture of a DRAM system where the memory i
 
 The following block diagram illustrates the key components of the design:
 
+
+
+
+
+## Components Used
+
+- **1-Bit DRAM Cell**: A single bit of data is stored in a capacitor, with access controlled by a transistor.
+- **Row Decoder**: This decoder selects the row of memory cells based on the input address.
+- **Column Decoder**: Selects a specific bit within the row.
+- **Refresh Mechanism**: A simple logic circuit that periodically refreshes the data in the capacitors to prevent loss of charge.
+
+## How the Design Works
+
+### 1-Bit DRAM Cell
+
+A single DRAM cell consists of:
+- A **transistor** that acts as a switch.
+- A **capacitor** that holds the bit of data as charge.
+
+The transistor is controlled by a row decoder to select which row is being accessed. The column decoder selects the specific bit within the row, allowing for either reading or writing data.
+
+### 8-Bit DRAM Array
+
+The 8-bit DRAM array is formed by connecting eight 1-bit DRAM cells together, forming a row of 8 bits. The row and column decoders are responsible for ensuring that the correct cell is accessed during read and write operations.
+
+### Refresh Mechanism
+
+Due to the nature of DRAM, data is stored in capacitors which tend to leak charge over time. A refresh mechanism is required to periodically recharge the capacitors and prevent data loss. This operation must be done at regular intervals.
+
+## Data Operations
+
+- **Write Operation**: The write operation stores a new bit of data in the selected 1-bit DRAM cell. A high voltage will store a "1", while a low voltage stores a "0".
+- **Read Operation**: The read operation reads the stored value from the capacitor. The charge is read via the transistor and output to the data bus.
+
+## Getting Started
+
+Follow the instructions below to simulate and test this DRAM design.
+
+### Prerequisites
+
+- **VLSI Design Tool**: You will need a VLSI design tool that supports circuit-level simulations, such as Cadence Virtuoso, Synopsys, or any other tool that supports DRAM cell simulation.
+- **Basic Understanding of DRAM**: Familiarity with how DRAM functions and its components, including row/column decoders, capacitors, and transistors, will help in understanding this design.
+
+### Installing
+
+Clone this repository to get access to the simulation files:
+
+```bash
+git clone https://github.com/yourusername/8bit-dram-using-1bit-dram.git
