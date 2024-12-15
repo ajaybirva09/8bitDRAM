@@ -47,6 +47,8 @@ A single DRAM cell consists of:
  
 ![WhatsApp Image 2024-12-15 at 22 48 23](https://github.com/user-attachments/assets/cb788f58-3906-4218-a83f-76fedd3c6554)
 The transistor is controlled by a row decoder to select which row is being accessed. The column decoder selects the specific bit within the row, allowing for either reading or writing data.
+##Symbol
+
 
 ### 8-Bit DRAM Array
 
