@@ -22,7 +22,7 @@ This design simulates the basic architecture of a DRAM system where the memory i
 ## Block Diagram
 
 The following block diagram illustrates the key components of the design:
-https://github.com/ajaybirva09/8bitDRAM/issues/1#issue-2740788010
+![Uploading WhatsApp Image 2024-12-15 at 22.48.23.jpeg…]()
 
 
 
