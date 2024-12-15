@@ -1,0 +1,6 @@
+# Cadence generated files
+.cds*
+.sim*
+.spectre*
+.temp
+.psf
