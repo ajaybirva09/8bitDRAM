@@ -57,6 +57,8 @@ The transistor is controlled by a row decoder to select which row is being acces
 
 The 8-bit DRAM array is formed by connecting eight 1-bit DRAM cells together, forming a row of 8 bits. The row and column decoders are responsible for ensuring that the correct cell is accessed during read and write operations.
 
+![WhatsApp Image 2024-12-15 at 22 48 22](https://github.com/user-attachments/assets/fdddfb2b-6fcd-4415-9532-fbeedc31952a)
+
 ### Refresh Mechanism
 
 Due to the nature of DRAM, data is stored in capacitors which tend to leak charge over time. A refresh mechanism is required to periodically recharge the capacitors and prevent data loss. This operation must be done at regular intervals.
