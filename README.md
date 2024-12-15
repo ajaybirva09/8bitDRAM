@@ -22,6 +22,7 @@ This design simulates the basic architecture of a DRAM system where the memory i
 ## Block Diagram
 
 The following block diagram illustrates the key components of the design:
+
 ![WhatsApp Image 2024-12-15 at 22 48 23](https://github.com/user-attachments/assets/cb788f58-3906-4218-a83f-76fedd3c6554)
 
 
