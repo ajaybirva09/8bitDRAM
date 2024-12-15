@@ -1,39 +1,68 @@
-##8-Bit DRAM Design Using Cadence Virtuoso
+  # 8-Bit DRAM Design Using 1-Bit DRAM Cells
 
-#Project Overview
+This project demonstrates the design and layout of an 8-bit DRAM array using 1-bit DRAM cells created in **Cadence Virtuoso**. The goal of this project is to implement a simple, but scalable memory design that can be expanded and adapted for various memory applications.
 
-This project focuses on designing, simulating, and verifying an 8-bit DRAM module using Cadence Virtuoso. The DRAM architecture is built from a single 1-bit memory cell, scaled to an 8-bit array for parallel read/write operations. The project showcases the use of 180nm CMOS technology, simulates DRAM read and write functionality, and ensures the reliability of data storage through retention tests.
+## Project Overview
 
-#Features
+The **1-bit DRAM cell** is the basic building block of the **8-bit DRAM array**. The design consists of two main components:
 
-1-bit DRAM Cell Design: Based on an access transistor and a storage capacitor.
-8-bit DRAM Array: Combines individual 1-bit cells into a functional array with shared wordlines.
-#Functionality:
-Read/Write operations.
-Refresh and retention simulations.
-Technology: 180nm CMOS library.
-#Tools:
-Schematic and layout design using Cadence Virtuoso.
-Circuit simulation using Spectre.
-Verification of layout design (DRC, LVS).
+1. **1-bit DRAM Cell**: This cell stores a single bit of data and consists of two inverters, access transistors, and a capacitor for data storage.
+2. **8-bit DRAM Array**: A collection of 8 of the 1-bit DRAM cells arranged in a matrix configuration. This design uses wordline and bitline decoding to allow selective access to each bit in the array.
 
-#Tools and Environment
-Cadence Virtuoso: Schematic design, layout creation, and netlist generation.
-Spectre: Simulation of DRAM functionality and transient behavior.
-Assura or Calibre: Design Rule Check (DRC) and Layout Versus Schematic (LVS) verification.
-Linux/UNIX: Recommended operating system for running Cadence.
-Technology: 180nm PDK for component modeling.
-Design Description
+### Key Features:
+- **1-bit DRAM cell design** that can be scaled to larger arrays.
+- **Array architecture** for accessing multiple bits of data at once.
+- **Cadence Virtuoso** used for schematic capture, layout design, and simulation.
+- **Design Rule Check (DRC)** and **Layout vs. Schematic (LVS)** were performed to ensure correctness.
 
-##1. 1-Bit DRAM Cell
-#Components:
-Access Transistor: Connects the storage capacitor to the bitline when the wordline is activated.
-Storage Capacitor: Holds the charge representing the memory bit (1 or 0).
-Connections:
-Wordline (WL): Activates the cell for read/write.
-Bitline (BL): Facilitates data transfer.
-VDD: Supplies the voltage for operation.
-#2. 8-Bit DRAM Array
-Composed of 8 DRAM cells arranged in a single row.
-Shared wordline (WL) for row access.
-Individual bitlines (BL1–BL8) for each cell to enable parallel data operations.
+## Project Structure
+
+The project is organized into the following directories:
+
+- **`schematics/`**: Contains the schematic files for the 1-bit DRAM cell and the 8-bit DRAM array.
+  - `1bit_dram_cell.sch`: Schematic for the 1-bit DRAM cell.
+  - `8bit_dram_array.sch`: Schematic for the 8-bit DRAM array.
+  
+- **`layouts/`**: Contains the layout files for the 1-bit DRAM cell and the 8-bit DRAM array.
+  - `1bit_dram_cell.lyt`: Layout for the 1-bit DRAM cell.
+  - `8bit_dram_array.lyt`: Layout for the 8-bit DRAM array.
+  
+- **`documentation/`**: Contains project documentation and design notes.
+  - `design_notes.txt`: A text file outlining design decisions, challenges, and solutions.
+  
+- **`README.md`**: This file, containing an overview of the project, structure, and instructions.
+
+## Instructions
+
+### 1. Schematic Design:
+- Open the schematic files (`1bit_dram_cell.sch` and `8bit_dram_array.sch`) in **Cadence Virtuoso**.
+- Review the connections and ensure that the 1-bit DRAM cell operates correctly.
+  
+### 2. Layout Design:
+- Open the layout files (`1bit_dram_cell.lyt` and `8bit_dram_array.lyt`) in **Cadence Virtuoso**.
+- Check the layout and ensure all components are correctly placed and routed.
+  
+### 3. Run DRC and LVS:
+- Run **Design Rule Check (DRC)** to ensure that the layout adheres to the design rules.
+- Run **Layout vs. Schematic (LVS)** to verify that the layout matches the schematic.
+
+### 4. Simulation:
+- Perform **functional simulation** to verify the operation of the 1-bit DRAM cell and 8-bit DRAM array.
+- Simulate read/write operations, and check for data integrity.
+
+## Tools Used
+
+- **Cadence Virtuoso**: For schematic capture, layout design, and simulation.
+- **DRC (Design Rule Check)**: To ensure the layout adheres to design rules.
+- **LVS (Layout vs. Schematic)**: To check that the layout matches the schematic.
+
+## Future Improvements
+
+- **Scaling**: The design can be extended to larger DRAM arrays, such as 16-bit, 32-bit, or even larger.
+- **Optimization**: Future work could focus on optimizing the area and power consumption of the DRAM array.
+- **Performance**: Add control logic for efficient read and write cycles.
+
+## License
+
+This project is open source. You can freely use, modify, and distribute it under the MIT license.
+
