@@ -34,6 +34,7 @@ The following block diagram illustrates the key components of the design:
 - **Row Decoder**: This decoder selects the row of memory cells based on the input address.
 - **Column Decoder**: Selects a specific bit within the row.
 - **Refresh Mechanism**: A simple logic circuit that periodically refreshes the data in the capacitors to prevent loss of charge.
+ 
 
 ## How the Design Works
 
@@ -42,6 +43,8 @@ The following block diagram illustrates the key components of the design:
 A single DRAM cell consists of:
 - A **transistor** that acts as a switch.
 - A **capacitor** that holds the bit of data as charge.
+
+![image](https://github.com/user-attachments/assets/ae13091f-ce1b-4e45-91a2-69252ea3c23e)
 
 The transistor is controlled by a row decoder to select which row is being accessed. The column decoder selects the specific bit within the row, allowing for either reading or writing data.
 
