@@ -1,21 +1,26 @@
-# 8bitDRAM
-To implement an 8-bit DRAM using 1-bit cells in Cadence Virtuoso, follow this structured approach. Below is a repository-style explanation tailored for a Cadence environment
-8bit_DRAM_Cadence/
-│
-├── README.md                   # Project overview and instructions
-├── schematics/
-│   ├── 1bit_DRAM/              # Schematic and symbol for 1-bit DRAM
-│   └── 8bit_DRAM/              # Schematic and symbol for 8-bit DRAM array
-│
-├── layouts/
-│   ├── 1bit_DRAM/              # Layout for 1-bit DRAM cell
-│   └── 8bit_DRAM/              # Layout for 8-bit DRAM array
-│
-├── simulations/
-│   ├── 1bit_DRAM_test/         # Testbench and results for 1-bit DRAM
-│   └── 8bit_DRAM_test/         # Testbench and results for 8-bit DRAM
-│
-└── docs/
-    ├── design_specs.pdf        # Specifications for DRAM design
-    ├── simulation_results.pdf  # Waveforms and performance analysis
-    └── setup_guide.md          # Cadence environment setup
+* 1-bit DRAM cell with write and read functionality
+
+* Power supply
+VDD Vdd 0 DC 3.3V
+
+* Wordline control
+VWL WL 0 PULSE(0 3.3V 0 1ns 1ns 10ns 20ns) 
+
+* Bitline driver
+VBIT BL 0 DC 0
+
+* Access transistor
+M1 BL Storage WL Vdd PMOS W=0.18u L=0.18u 
+
+* Storage capacitor (represents memory cell)
+C1 Storage 0 30f
+
+* Load resistor to simulate read operation
+Rload BL 0 1k
+
+* Transistor model
+.MODEL PMOS PMOS LEVEL=3
+
+* Simulation control
+.TRAN 0.1ns 100ns
+.END
