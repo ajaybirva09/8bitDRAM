@@ -68,7 +68,7 @@ Due to the nature of DRAM, data is stored in capacitors which tend to leak charg
 - **Write Operation**: The write operation stores a new bit of data in the selected 1-bit DRAM cell. A high voltage will store a "1", while a low voltage stores a "0".
 - **Read Operation**: The read operation reads the stored value from the capacitor. The charge is read via the transistor and output to the data bus.
 
-### Wavefor
+### Waveform
 ## 1bit DRAM
 ![WhatsApp Image 2024-12-15 at 23 33 20](https://github.com/user-attachments/assets/a30f5f23-79e6-4ba5-b64e-5ca6b8c1b1e0)
  
